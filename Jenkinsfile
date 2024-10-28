@@ -10,6 +10,11 @@ pipeline {
       steps {
         bat 'mvn -B -q package'
       }
+      post {
+        always {
+          junit 'target/surfire-reports/.*xml'
+        }
+      }
     }
   }
 
