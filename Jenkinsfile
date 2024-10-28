@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   tools {
-    maven "maven_3_8_5"
+    maven "maven 3.9.9"
   }
 
   stages {
@@ -12,7 +12,7 @@ pipeline {
       }
       post {
         always {
-          junit 'target/surfire-reports/*.xml'
+          junit 'target/surefire-reports/*.xml'
         }
       }
     }
