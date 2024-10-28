@@ -9,7 +9,6 @@ public class CaluladoraImpl implements Calculadora {
                 case '+' -> i1+i2;
                 case '-' -> i1-i2;
                 case '*' -> i1*i2;
-                case '/' -> i1/i2;
                 default -> 0;
             };
             return res;
