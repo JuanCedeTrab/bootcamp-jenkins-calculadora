@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent { label 'jdk21' }
 
   tools {
     maven "maven_3_8_5"
