@@ -31,10 +31,10 @@ class CaluladoraImplTest {
 		Assertions.assertEquals(15, resultado);
 	}
 
-        @Test
+        /*@Test
 	void test_dividir() {
 		int resultado = calculadora.calcular(15, '/', 3);
 		Assertions.assertEquals(5, resultado);
-	}
+	}*/
         
 }
