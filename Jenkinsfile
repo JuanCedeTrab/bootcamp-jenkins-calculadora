@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'jdk21' }
+  agent any
 
   tools {
     maven "maven_3_8_5"
@@ -10,11 +10,6 @@ pipeline {
   }
 
   stages {
-    stage ('ejemplo') {
-      steps {
-        echo params.CONTRASENIA
-      }
-    }
     stage('Build') {
       steps {
         bat 'mvn -B -q package'
@@ -23,8 +18,14 @@ pipeline {
         always {
           junit 'target/surefire-reports/*.xml'
         }
+        failure {
+          echo "Este es en un caso de fallo"
+          echo env.JOB_NAME
+        }
+        success {
+          echo "Termino bien la tarea"
+          echo env
       }
     }
   }
-
 }
