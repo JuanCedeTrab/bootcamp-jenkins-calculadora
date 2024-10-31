@@ -24,7 +24,7 @@ pipeline {
         }
         success {
           echo "Termino bien la tarea"
-          echo env
+          echo CONTRASENIA
       }
     }
   }
