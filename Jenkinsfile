@@ -5,9 +5,9 @@ pipeline {
     maven "maven_3_8_5"
   }
 
-  parameters {
+  /*parameters {
     string(name: 'CONTRASENIA', defaultValue: 'secreto', description: 'Ingresar la contrasenia')
-  }
+  }*/
 
   stages {
     stage('Build') {
